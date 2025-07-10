@@ -1,31 +1,35 @@
-How to Run agent_graph.py (LangGraph + Mistral)
+HOW TO RUN: LangGraph Agent Assistant
 
-1. ✅ Place `agent_graph.py` in your working folder.
+1. Create a Python virtual environment (optional but recommended):
 
-2. ✅ Create and activate a Python virtual environment:
-   > python -m venv langgraph_env
-   > langgraph_env\Scripts\activate  (on Windows)
+   For Windows:
+       python -m venv env
+       env\Scripts\activate
 
-3. ✅ Install the required packages:
-   > pip install langgraph langchain langchain-ollama
+   For macOS/Linux:
+       python3 -m venv env
+       source env/bin/activate
 
-4. ✅ Install and run Ollama:
-   - Download Ollama from: https://ollama.com/download
-   - Then in terminal run:
-     > ollama pull mistral
-     > ollama run mistral
+2. Install the required Python libraries:
 
-   (Keep Ollama running while using the script.)
+       pip install langgraph langchain langchain-community
 
-5. ✅ Run the Python script:
-   > python agent_graph.py
+3. Install and start Ollama:
 
-6. 🧪 You will see the test results printed:
-   - Summary
-   - Math
-   - Translator
-   - Time
-   - Fallback
+   a) Download Ollama from:
+       https://ollama.com/download
 
-7. 📌 Output Example:
-   ✅ Final Output: <response>
+   b) Pull the Mistral model:
+       ollama pull mistral
+
+   c) Run Ollama (if not already running):
+       ollama run mistral
+
+4. Save your Python code as:
+       agent_graph.py
+
+5. Run the application:
+
+       python agent_graph.py
+
+6. Follow the on-screen menu to interact with the assistant.
