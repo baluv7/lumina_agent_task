@@ -1,85 +1,42 @@
-# 🧠 LangGraph + Mistral Agentic Workflow
+# 🧠 LangGraph Non-Linear Agent (Mistral + Ollama)
 
-This project demonstrates a **non-linear agent workflow** using [LangGraph](https://github.com/langchain-ai/langgraph), [LangChain](https://www.langchain.com/), and the open-source **Mistral 7B** model via [Ollama](https://ollama.com/).
+## 📌 Project Description
 
-### ✅ Features
-- Modular graph-based agent system using LangGraph.
-- Dynamic routing logic (router node).
-- 3 functional nodes: `summarizer`, `math`, `fallback`.
-- Final output handler node (`printer`).
-- Works with local LLMs using Ollama and Mistral.
+This project demonstrates a non-linear agent system built using **LangGraph**, powered by the **Mistral 7B** model running locally via **Ollama**. It dynamically routes inputs to appropriate handlers like summarizer, math solver, translator, or time reporter, all orchestrated through a graph of nodes.
 
----
+## ⚙️ Tech Stack
 
-## 📦 Folder Structure
+- **LangGraph** - Node-based orchestration for LLMs
+- **LangChain** - LLM integration layer
+- **Ollama** - Run open-source LLMs locally
+- **Mistral 7B** - Lightweight reasoning model
+- **Python 3.10+**
 
-```
-lumina_agent_task/
-│
-├── agent_graph.py         # Main LangGraph agent implementation
-├── README.md              # Project overview and instructions
-└── how_to_run.txt         # Simplified step-by-step run guide
-```
+## 🚀 Features
 
----
+- 🔁 Non-linear agent flow
+- 📐 Math solving
+- 📝 Text summarization
+- 🌐 English to Hindi translation
+- ⏰ Current time reporting
+- 🧠 Fallback response for unknown inputs
 
-## 🔧 Requirements
+## 📁 Files
 
-- Python 3.10+
-- [Ollama](https://ollama.com/download)
-- Mistral model installed in Ollama
-- Virtual Environment (Recommended)
+- `agent_graph.py` — Main agent graph code
+- `README.md` — This documentation
+- `how_to_run.txt` — Step-by-step usage guide
 
----
+## ✅ Test Examples
 
-## ⚙️ Setup Instructions
+- `"summarize: LangGraph is a powerful orchestration tool."`
+- `"34 + 12 / 2"`
+- `"translate: Hello, how are you?"`
+- `"What is the current time?"`
+- `"Tell me something about the ocean."`
 
-```bash
-# 1. Clone/download the code
-cd lumina_agent_task
+## 🔗 References
 
-# 2. Create virtual environment
-python -m venv langgraph_env
-langgraph_env\Scripts\activate        # For Windows
-
-# 3. Install dependencies
-pip install langgraph langchain langchain-community langchain-ollama
-
-# 4. Install Ollama and pull mistral model
-# Install: https://ollama.com/download
-ollama pull mistral
-ollama run mistral                      # Start Ollama server
-```
-
----
-
-## 🚀 Running the Agent
-
-```bash
-# Make sure you're in the virtual environment
-langgraph_env\Scripts\activate
-
-# Run the agent script
-python agent_graph.py
-```
-
-Expected output will include:
-- Summary output from Mistral
-- Math solving
-- Fallback response for unknown prompts
-
----
-
-## ✅ Example Inputs
-
-```
-summarize: LangGraph is used for LLM orchestration.
-34 + 12 / 2
-tell me something interesting
-```
-
----
-
-## 🙌 Credits
-- LangGraph by LangChain
-- Mistral model via Ollama
+- [LangGraph Documentation](https://python.langchain.com/docs/langgraph/)
+- [Ollama Setup](https://ollama.com/)
+- [Mistral 7B Model](https://ollama.com/library/mistral)
