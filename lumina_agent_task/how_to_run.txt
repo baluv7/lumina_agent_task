@@ -1,0 +1,98 @@
+# 🔁 LangGraph Multi-Agent Orchestration using Mistral (via Ollama)
+
+This project is a submission for the **Agent Track Internship Task**. It demonstrates how to build a **non-linear agentic workflow** using LangGraph, powered by the Mistral 7B LLM via Ollama.
+
+## ✅ Features
+
+- **Router Node** — Directs input to the correct functional node.
+- **Math Solver** — Performs and explains calculations.
+- **Summarizer** — Summarizes input text.
+- **Translator** — Translates text into Hindi.
+- **Time Node** — Returns the current date and time.
+- **Fallback** — Handles general queries or unknown instructions.
+- **Printer** — Final node to display the result.
+
+## 📁 File Structure
+
+```
+├── agent_graph.py     # Main LangGraph pipeline with nodes
+├── README.md          # Project documentation (this file)
+├── how_to_run.txt     # Step-by-step instructions to run the project
+```
+
+## 🧠 Tech Stack
+
+- [LangGraph](https://github.com/langchain-ai/langgraph)
+- [LangChain](https://www.langchain.com/)
+- [Ollama](https://ollama.com/) + Mistral
+- Python 3.10+
+
+## 🚀 Usage
+
+### 1. Clone this repo and create a virtual environment
+
+```bash
+git clone <your-repo-url>
+cd lumina_agent_task
+python -m venv langgraph_env
+```
+
+### 2. Activate the environment
+
+- **Windows**:
+  ```bash
+  langgraph_env\\Scripts\\activate
+  ```
+- **Linux/macOS**:
+  ```bash
+  source langgraph_env/bin/activate
+  ```
+
+### 3. Install dependencies
+
+```bash
+pip install langgraph langchain langchain-community langchain-ollama
+```
+
+### 4. Download Mistral Model with Ollama
+
+Make sure [Ollama](https://ollama.com/download) is installed and running.
+
+```bash
+ollama pull mistral
+```
+
+### 5. Run the Agent Graph
+
+```bash
+python agent_graph.py
+```
+
+## 🧪 Example Outputs
+
+```
+--- Test: Summary ---
+✅ Final Output: LangGraph is a tool used for managing and coordinating Large Language Models (LLMs)...
+
+--- Test: Math ---
+✅ Final Output: 34 + 12 / 2 = 40
+
+--- Test: Translator ---
+✅ Final Output: "Hello, how are you?" → "नमस्ते, आप कैसे हैं?"
+
+--- Test: Time ---
+✅ Final Output: Current time: Tuesday, 09 July 2025 at 08:32 PM
+
+--- Test: Fallback ---
+✅ Final Output: Did you know dolphins use echolocation to navigate underwater?
+```
+
+## 📌 Notes
+
+- You must start Ollama (`ollama serve`) before running this script.
+- The model must be pulled using `ollama pull mistral` before first use.
+- Internet not required after model is downloaded (runs locally).
+
+## 🙌 Author
+
+Built by Balu for Lumina Internship — Agent Track.
