@@ -1,42 +1,94 @@
-# 🧠 LangGraph Non-Linear Agent (Mistral + Ollama)
+# 🧠 LangGraph Agent Assistant (Internship Task - Agent Track)
 
-## 📌 Project Description
-
-This project demonstrates a non-linear agent system built using **LangGraph**, powered by the **Mistral 7B** model running locally via **Ollama**. It dynamically routes inputs to appropriate handlers like summarizer, math solver, translator, or time reporter, all orchestrated through a graph of nodes.
-
-## ⚙️ Tech Stack
-
-- **LangGraph** - Node-based orchestration for LLMs
-- **LangChain** - LLM integration layer
-- **Ollama** - Run open-source LLMs locally
-- **Mistral 7B** - Lightweight reasoning model
-- **Python 3.10+**
+This project implements a **non-linear agent** using [LangGraph](https://github.com/langchain-ai/langgraph) and [Mistral](https://ollama.com/library/mistral) via [Ollama](https://ollama.com/), as part of the **Agent Track Internship Task**. It dynamically routes user input through different nodes — Math, Summary, Translator, or Fallback — using a graph-based architecture.
 
 ## 🚀 Features
 
-- 🔁 Non-linear agent flow
-- 📐 Math solving
-- 📝 Text summarization
-- 🌐 English to Hindi translation
-- ⏰ Current time reporting
-- 🧠 Fallback response for unknown inputs
+- Interactive CLI assistant with a dynamic menu
+- Non-linear agent graph with conditional routing
+- Powered by **LangGraph + LangChain + Ollama + Mistral 7B**
+- Includes: 
+  - 📌 Summary
+  - ➗ Math Solver
+  - 🌐 Translator (to Hindi)
+  - 🤷‍♂️ Fallback for random/general queries
+
+## 🛠️ Tech Stack
+
+- Python 3.10+
+- LangGraph
+- LangChain
+- Ollama (Mistral model)
+- Terminal (CLI)
+
+## 📦 Installation & Setup
+
+1. **Clone the repo** (or copy the code into `agent_graph.py`):
+   ```bash
+   git clone <your-repo-url>
+   cd <project-folder>
+   ```
+
+2. **Set up virtual environment (optional but recommended)**:
+   ```bash
+   python -m venv env
+   source env/bin/activate  # Windows: env\Scripts\activate
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   pip install langgraph langchain langchain-community
+   ```
+
+4. **Install and start Ollama with Mistral**:
+   ```bash
+   # Download Ollama (if not already)
+   https://ollama.com/download
+
+   # Pull the Mistral model
+   ollama pull mistral
+   ```
+
+5. **Run the app**:
+   ```bash
+   python agent_graph.py
+   ```
+
+## 🧪 Example Interaction
+
+```
+🤖 Welcome to the LangGraph Agent Assistant!
+
+🔘 Please choose an option:
+1. Summary
+2. Math
+3. Translator
+4. Fallback
+5. Exit
+
+Enter your choice (1-5): 1
+📝 Enter your input: summarize: LangGraph helps structure workflows using nodes.
+
+✅ Final Output: LangGraph simplifies AI orchestration using a graph-based approach...
+```
 
 ## 📁 Files
 
-- `agent_graph.py` — Main agent graph code
-- `README.md` — This documentation
-- `how_to_run.txt` — Step-by-step usage guide
+- `agent_graph.py`: Main application file containing LangGraph node logic and CLI
+- `README.md`: This file (usage instructions, setup guide)
 
-## ✅ Test Examples
+## ✅ Completed Task Checklist
 
-- `"summarize: LangGraph is a powerful orchestration tool."`
-- `"34 + 12 / 2"`
-- `"translate: Hello, how are you?"`
-- `"What is the current time?"`
-- `"Tell me something about the ocean."`
+- [x] LangGraph Agent with multiple functional nodes
+- [x] Math, Summary, Translator, Fallback nodes
+- [x] Conditional routing based on input
+- [x] Dynamic CLI interface
+- [x] Submission-ready, clean and modular code
 
-## 🔗 References
+## 🙌 Credits
 
-- [LangGraph Documentation](https://python.langchain.com/docs/langgraph/)
-- [Ollama Setup](https://ollama.com/)
-- [Mistral 7B Model](https://ollama.com/library/mistral)
+- [LangGraph](https://github.com/langchain-ai/langgraph)
+- [LangChain](https://python.langchain.com/)
+- [Ollama](https://ollama.com/)
+- [Mistral 7B](https://ollama.com/library/mistral)
+
